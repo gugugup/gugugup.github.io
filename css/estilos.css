@@ -1,0 +1,519 @@
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main {
+    background-image: url("../img/fondopagina.jpg");
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/** Cabecera */
+.cabecera {
+    background-color: rgb(224, 187, 106);
+    width: 100%;
+    height: 50px;
+    padding: 0 40px;
+}
+
+.cabecera_link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.cabecera_img {
+    object-fit: cover;
+    height: 90%;
+    margin-right: 10px;
+}
+
+/** Navegacion */
+.navegacion {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 60px;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.menu{
+    width: 45px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.menu span{
+    display: block;
+    height: 3px;
+    background-color: white;
+    margin-top: 7px;
+    transform-origin: 0px 100%;
+    transition: 300ms;
+    position: relative;
+    z-index: 10;
+}
+
+.activelinea1_barra_menu {
+    transform: rotate(45deg) 
+    translate(-5px, -2px);
+}
+
+.activelinea2_barra_menu {
+    opacity: 0;
+    margin-left: -40px;
+}
+
+.activelinea3_barra_menu {
+    transform: rotate(-45deg) 
+    translate(-5px, 6px);
+}
+
+.cont-menu{
+    background-color: rgb(42, 42, 42);
+    box-shadow: 2px 0px 5px 2px rgb(66, 66, 66);
+    width: 400px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all .5s ease;
+}
+
+.cont-menu ul{
+    padding: 100px 0px 20px 0px;
+    list-style: none;
+}
+
+.cont-menu ul li a{
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size: 23px;
+    text-decoration: none;
+    padding: 10px 50px;
+    cursor: pointer;
+}
+
+.cont-menu ul li:hover{
+    background-color: rgb(228, 228, 228);
+    color: rgb(42, 42, 42);
+}
+
+/** estilos JS*/
+.active {
+    transform: translate(-600px);
+}
+
+.opacity {
+    background-color: rgba(0, 0, 0, 5);
+}
+/** fin js*/
+
+.navegacion a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 650;
+    padding: 25px 30px;
+}
+
+.navegacion a:hover{
+    color: black;
+    background-color: white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: 50px;
+}
+/** Fin Navegacion*/
+
+/** Seccion 1 Perfil*/
+.perfil{
+    width: 100%;
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfil_titulo{
+    font-size: 50px;
+    font-weight: 600;
+    color: rgb(224, 187, 106);
+}
+
+.perfil_contenido{
+    padding: 20px 30px;
+}
+
+.perfil_texto{
+    padding: 20px 50px;
+}
+
+.perfil_texto p{
+    padding-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.perfil_img{
+    width: 40%;
+}
+
+.perfil_img_img{
+height: 300px;
+}
+
+/** Seccion 2 Habilidades*/
+.hab{
+    width: 100%;
+    display: flex;
+    padding: 50px 0px;
+}
+
+.hab_contenido{
+    width: 70%;
+}
+
+.hab_titulo{
+    font-size: 38px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 0px;
+}   
+
+.hab_img{
+    width: 40%;
+    padding-top: 30px;
+    padding-left: 140px;
+}
+
+.hab_img_img{
+    height: 400px;
+}
+
+.hab_exp{
+    width: 30%;
+}
+.hab_exp_titulo{
+    font-size: 38px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    padding-right: 0px;
+}
+
+.hab_exp_mercado_titulo{
+    font-size: 15px;
+}
+
+.hab_exp_mercado_sub{
+    font-size: 17px;
+}
+
+.hab_exp_mercado_sub a{
+    text-decoration: none;
+    color: blue;
+}
+
+.hab_exp_mercado_sub a:hover{
+    color: yellow;
+}
+
+.hab_exp_img-m{
+    height: 150px;
+    padding: 15px 0px;
+}
+
+.hab_exp_tareas p{
+    font-size: 20px;
+    color: rgb(2, 155, 10);
+    font-weight: bold;
+}
+
+.hab_exp_tareas ul{
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 20px;
+}
+
+.hab_exp_dl{
+    padding-top: 20px;
+}
+
+.hab_exp_dl_titulo{
+    font-size: 15px;
+}
+
+.hab_exp_dl_sub{
+    font-size: 17px;
+}
+
+.hab_exp_dl_sub a{
+    text-decoration: none;
+    color: blue;
+}
+
+.hab_exp_dl_sub a:hover{
+    color: rgb(255, 0, 0);
+}
+
+.hab_exp_img-dl{
+    height: 200px;
+}
+
+/** Seccion 3 Educacion*/
+.educ {
+    padding: 50px 0px;
+}
+
+.educ_titulo{
+    font-size: 38px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 0px 550px;
+}
+
+.educ_estudios{
+    padding: 40px 0px;
+}
+
+.educ_estudios_h4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.educ_estudios_h4_h{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.educ_estudios p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 8px 0px;
+}
+
+.educ_estudios_cursos h3{
+    color: blue;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.educ_estudios_p{
+    font-size: 20px;
+    color: black;
+    font-weight: bolder;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.educ_estudios_p_p{
+    font-size: 20px;
+    color: black;
+    font-weight: bolder;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.educ_estudios_uni{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.educ_estudios_info h4{
+    color: blue;
+    font-size: 30px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.educ_estudios_info p{
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.educ_estudios_img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.educ_estudios_img_img{
+    height: 190px;
+}
+
+/** Seccion 4 Contacto*/
+.contacto{
+    padding: 50px 0px;
+}
+
+.contacto_titulos h2{
+    font-size: 38px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 0px 550px;
+}
+
+.contacto_titulos h4{
+    font-size: 20px;
+    color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+}
+
+.contacto_medios{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contacto_medios_redes{
+    padding: 10px 30px;
+}
+
+.contacto_medios_redes a{
+    text-decoration: none;
+    color: rgb(46, 9, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto_medios_redes a:hover{
+    color: rgb(226, 142, 38);
+}
+
+.contacto_medio_img-f{
+    height: 97px;
+}
+
+.contacto_medio_img-t{
+    height: 78px;
+    width: 78px;
+}
+
+.contacto_medio_img-l{
+    height: 75px;
+    width: 75px;
+}
+
+.contacto_medio_img-i{
+    height: 77px;
+    width: 77px;
+}
+
+.contacto_medios_links-f{
+    padding-top: 3px;
+}
+
+.contacto_medios_links-t{
+    padding-top: 21px;
+}
+
+.contacto_medios_links-l{
+    padding-top: 24px;
+}
+
+.contacto_medios_links-i{
+    padding-top: 20px;
+}
+
+.contacto_footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.contacto_footer h3{
+    font-size: 20px;
+}
+
+.contacto_footer p{
+    padding-top: 25px;
+    font-size: 17px;
+}
+
+.contacto_footer span{
+    font-weight: bolder;
+}
+
+.boton {
+    height: 40px;
+    width: 80px;
+}
+/** Fin */
